@@ -1,0 +1,38 @@
+{
+  "description": "In free time u done Fun",
+  "homepage_url": "https://github.com/anilreddychinna",
+  "manifest_version": 2,
+  "name": "Coffee Time",
+  "icons": {
+    "48": "icons/coffee-icon-48.png"
+  },
+
+  "permissions": [
+    "tabs"
+  ],
+
+"background": {
+    "scripts": ["background.js"]
+  },
+
+ "content_scripts": [
+    {
+      "matches": ["*://*.facebook.com/*"],
+      "js": ["background.js"]
+    }
+  ],
+
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": "icons/coffee-icon-32.png",
+    "default_title": "Title",
+    "default_popup": "popup/tabs.html"
+  },
+  
+  "web_accessible_resources": [
+    "Templates/*.js",
+    "Templates/*.css"
+  ],
+
+  "version": "1.0"
+}

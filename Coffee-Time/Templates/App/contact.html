@@ -1,0 +1,292 @@
+
+<!DOCTYPE HTML>
+<html>
+	
+<!-- Mirrored from antrikshtyagi.com/demo/spartan/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Feb 2017 16:55:37 GMT -->
+<head>
+		<title>Contactus</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+		<script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		  <script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+				});
+			});
+		</script>
+		
+		<script language="javascript">
+		
+		       function validate(){
+			   
+			   var form = document.frm;
+			   
+			          if(form.name.value==""){
+					   
+					      alert("Please Enter Your Name");
+						  
+						      form.name.focus();
+							  
+							  return false;
+						  
+					   }
+					   
+				var email=document.getElementById('txtemail');
+
+                var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+                      if (!filter.test(email.value)) {
+					  
+                           alert('Please provide a valid email address');
+						   
+                           form.email.focus();
+						   
+                           return false;
+ 
+                         }				
+			   
+			   var a = form.mobile.value;
+			   
+               if(a=="")
+                 {
+                      alert("please Enter the Contact Number");
+					  
+                      form.mobile.focus();
+					  
+                      return false;
+                  }
+				  
+                  if(isNaN(a))
+                     {
+                           alert("Enter the valid Mobile Number(Like : 9566137117)");
+						   
+                           form.mobile.focus();
+						   
+                           return false;
+                     }
+					 
+                  if((a.length < 10) || (a.length > 11))
+                     {
+                           alert(" Your Mobile Number must be 10 to 11 Integers");
+						   
+                           form.mobile.select();
+						   
+                           return false;
+                     }
+
+              if(document.message.value==""){
+			  
+			      alert("Please Enter Subject");
+				  
+				  document.message.focus();
+				  
+				  return false;
+			  }
+			   
+	}
+		  
+		</script>
+        
+         <style>
+div
+{
+text-align:justify;
+text-justify:inter-word;
+}
+</style>
+        
+	</head>
+	<body>
+	<!---start-wrap---->
+	
+		<!---start-header---->
+		<div class="header" id="top">
+			<div class="wrap">
+			<!---start-logo---->
+			<div class="logo">
+				<a href="index.html"><img src="images/logo.png" title="logo" /></a>
+			</div>
+			<!---End-logo---->
+			<!---start-top-nav---->
+			<div class="top-nav">
+				<ul>
+				    <li style="padding:20px 5px 0 0;"><img src="images/phone.png"> </li>
+					<li style="padding:25px 250px 0 0;"> +(91)-9650908592</li>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="services.html">Facilities</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+					<li class="active"><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+			<div class="clear"> </div>
+			<!---End-top-nav---->
+		</div>
+		<!---End-header---->
+	</div>
+		<!---start---content----->
+		<div class="wrap">
+		<div class="content">
+			<!---start-contect--->
+			<div class="contact">
+			<div style="padding:30px 525px;font-size:30px"><u>Find Us Here</u></div>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><div style="overflow:hidden;height:400px;width:1215px;"><div id="gmap_canvas" style="height:400px;width:1215px;"></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><a class="google-map-code" href="http://www.staubsauger-test.biz/" id="get-map-data">netz</a></div><script type="text/javascript"> function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(28.6053686,77.29309920000003),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(28.6053686, 77.29309920000003)});infowindow = new google.maps.InfoWindow({content:"<b>Spartan gym &amp; Fitness</b><br/>D-21 acharya niketan, Near shiv mandir<br/>Delhi-110091 Mayur Vihar Phase I" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+
+				<div class="section group">				
+				<div class="col span_1_of_3">
+					<div class="contact_info">
+			    	 	
+      				</div>
+      			<div class="company_address">
+				     	<h3>Spartan Gym & Fitness</h3>
+						    	<b>Address:</b> <p>D-21 acharya niketan, Near shiv mandir, Main</p>
+						   		<p> road, Mayur Vihar Phase I, Delhi - 110091</p>
+						   		
+				   		<b>Phone:</b> <p>+(91)-9650908592</p>
+				   		
+				 	 	<b>Email:</b> <p><span>info@domainname.com</span></p>
+				   		<b>Follow on:</b> <p><span>Facebook</span>, <span>Twitter</span></p>
+				   </div>
+				</div>				
+				<div class="col span_2_of_3">
+				  <div class="contact-form">
+				  <div id="mail_fun" style="height:25px; width:455px; background:#FFAD00; color:#ffffff; border-radius:7px; display:none;"><center><?php echo $msg; ?></center></div>
+				  	<h3>Contact Us</h3>
+					    <form method="post" action="#" name="frm" onsubmit="return validate();">
+					    	<div>
+						    	<span><label>NAME</label></span>
+						    	<span><input name="name" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						    	<span><label>E-MAIL</label></span>
+						    	<span><input name="email" type="text" class="textbox" id="txtemail"></span>
+						    </div>
+						    <div>
+						     	<span><label>MOBILE</label></span>
+						    	<span><input name="mobile" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						    	<span><label>Subject</label></span>
+						    	<span><textarea name="message"> </textarea></span>
+						    </div>
+						   <div>
+						   		<span><input type="submit" name="sub" value="Submit"></span>
+						  </div>
+					    </form>
+
+				    </div>
+  				</div>				
+			  </div>
+			</div>
+			<!---End-contect--->
+		</div>
+		</div>
+		<!---End---content----->
+		<div class="clear"> </div>
+		
+		<!---start-box---->
+			<div class="boxs">
+				<div class="wrap">
+				<div class="box">
+					
+						<div class="about-team">
+							<div class="client">
+							<h3>Our Clients</h3><br>
+								<div class="about-team-left">
+								
+									<a href="#"><img src="images/g1.jpg" title="client-name" /></a>
+								</div>
+								<div class="about-team-right">
+									<p>tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+								</div>
+								<div class="clear"> </div>
+							</div>
+							<div class="client">
+								<div class="about-team-left">
+									<a href="#"><img src="images/g2.jpg" title="client-name" /></a>
+								</div>
+								<div class="about-team-right">
+									<p>tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+								</div>
+								<div class="clear"> </div>
+							</div>
+							
+						
+					</div>
+				</div>
+				<div class="box center-box">
+					<div class="about-team">
+							
+							
+							<div class="client">
+							<h3>Our Clients</h3><br>
+								<div class="about-team-left">
+									<a href="#"><img src="images/g3.jpg" title="client-name" /></a>
+								</div>
+								<div class="about-team-right">
+									<p>tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+								</div>
+								<div class="clear"> </div>
+							</div>
+							<div class="client">
+								<div class="about-team-left">
+									<a href="#"><img src="images/g5.jpg" title="client-name" /></a>
+								</div>
+								<div class="about-team-right">
+									<p>tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+								</div>
+								<div class="clear"> </div>
+							</div>
+						
+					</div>
+				</div>
+				<div class="box">
+					<h3>GYM Services</h3>
+					<p>Spartan Gym & fitness offers a chain of Heath Studios and Gymnasiums which help you to lose weight, build health and endurance, improving your overall health. These activities train the heart, lungs and the cardio vascular system to process and deliver oxygen more quickly and efficiently. A wide range of equipments like Gym balls, tubings and rubber bands are available for you increase muscle or strength, reduce stress, improve sports performance or simply start to feel better. Spartan Gym has everything you need to help you to achieve your goal... </p>
+				</div>
+				<div class="clear"> </div>
+			</div>
+			<!---start-box---->
+		</div>
+		<!---End---content----->
+		<div class="clear"> </div>
+		<div class="footer">
+			<div class="wrap">
+			<div class="footer-left">
+				<div class="footer-nav1">
+        	<ul>
+        		<li id="twtr"><a href="#"><img src="images/twitter.png" alt="" title="Twitter"></a></li>
+            	<li id="fb"><a href="#"><img src="images/fb.png" alt="" title="facebook"></a></li>
+                <li id="feed"><a href="#"><img src="images/feed.png" alt="" title="Feed"></a></li>
+                <li id="plus"><a href="#"><img src="images/plus.png" alt="" title="Plus"></a></li>
+			</ul>
+        </div>
+			</div>
+            
+			<div class="footer-right">
+				<ul>
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+				
+			</div>
+			<div class="clear"> </div>
+			
+		</div>
+	</div>
+	<div class="clear"> </div>
+	<div class="top-link">
+		<div style="text-align:center; color:#ccc;">
+		<p class="link">Website Design & Developed by &nbsp; <a href="http://wiseongo.com/" target="_blank"> WiseOnGo</a></p>
+        </div>
+	</div>
+	<!---End-wrap---->
+	</body>
+
+<!-- Mirrored from antrikshtyagi.com/demo/spartan/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Feb 2017 16:55:37 GMT -->
+</html>

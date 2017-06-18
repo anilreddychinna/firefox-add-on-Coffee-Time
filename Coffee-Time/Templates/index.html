@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="jquery.min.js"></script>
+  
+  <script src="bootstrap.min.js"></script> 
+<!--
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  -->
+ 
+  <script src="angular.min.js"></script> 
+
+
+ <style>
+    body {
+    background-color: lightblue;
+}
+.btn-red { 
+  color: white; 
+  background-color: red; 
+ } 
+
+ .btn-orange { 
+  color: white; 
+  background-color: orange; 
+ } 
+
+ .btn-yellow { 
+  color: white; 
+  background-color: yellow; 
+ } 
+
+ .btn-green { 
+  color: white; 
+  background-color: green; 
+ } 
+
+.btn-blue { 
+  color: white; 
+  background-color: blue; 
+ } 
+
+ .btn-black { 
+  color: white; 
+  background-color: black; 
+ } 
+
+ .btn-white { 
+  color: white; 
+  background-color: white; 
+ } 
+
+.btn-violet { 
+  color: white; 
+  background-color: violet; 
+ } 
+
+.btn-indigo { 
+  color: white; 
+  background-color: indigo; 
+ } 
+
+
+.btn-s {
+
+height: 100px;
+width: 100px;
+}
+</style>
+
+</head>
+
+
+<body align="center">
+
+<div ng-app="myApp" ng-controller="myCtrl" >
+
+<!-- <button ng-click="myFunction()">Click Me!</button> -->
+
+<!-- <p>TOuch me..!!!</p>
+ -->
+
+<div ng-hide="dvalue">
+<img ng-src="{{myHeader}}" height="100" width="100"/> <br>
+<button type="button" class="btn btn-blue" ng-click="tryagain()">Try Agin</button>
+<button type="button" class="btn btn-danger" ng-click="exit()">Exit</button>
+
+</div>
+<!-- start div  -->
+<div class="container" ng-show="dvalue" align="center">
+
+  <!-- <h2>{{myHeader}}</h2> -->
+  <!-- <img ng-src="{{myHeader}}"/> -->
+
+
+
+
+  <p>Touch to Start RED</p>      
+  <button type="button" class="btn btn-red btn-s" ng-click="myFunction1('R','G')">Start (Green)</button>
+  <button type="button" class="btn btn-orange  btn-s" ng-click="myFunction1('O','W')">White</button>
+  <button type="button" class="btn btn-blue btn-s" ng-click="myFunction1('B','BL')">Black</button><br><br>
+  <button type="button" class="btn btn-violet btn-s" ng-click="myFunction1('V','Y')">Yellow</button>
+  <button type="button" class="btn btn-indigo btn-s" ng-click="myFunction1('I','')">End</button>
+  <button type="button" class="btn btn-green btn-s" ng-click="myFunction1('G','B')">Blue</button><br><br>
+  <button type="button" class="btn btn-yellow btn-s" ng-click="myFunction1('Y','O')">Orange</button>
+  <button type="button" class="btn btn-white btn-s" ng-click="myFunction1('W','I')">Indigo</button>
+  <button type="button" class="btn btn-black btn-s" ng-click="myFunction1('BL','V')">Voilate</button><br><br>
+  <br>
+  <a href="www.fb.com/anilreddy.karre">Facebook Page</a>
+  <!-- <button type="button" class="btn btn-success btn-s" ng-click="myFunction4()">4..{{ count }}.....</button>
+  <button type="button" class="btn btn-danger btn-s" ng-click="myFunction5()">5....{{ count }}...</button>
+  <button type="button" class="btn btn-info btn-s" ng-click="myFunction6()">6....{{ count }}....</button> -->
+  {{}}
+  <div ng-bind = "Message">
+  </div>
+  <!-- <input type="button" value="Start Timer" ng-click="StartTimer()" />
+  <input type="button" value="Stop Timer" ng-click="StopTimer()" /> -->
+
+<!-- <timer countdown="5" interval="1000"><div class="progress progress-striped active {{displayProgressActive}}"style="height: 30px;"> Remaining time : {{countdown}} second{{secondsS}} ({{progressBar}}%). Activity? {{displayProgressActive}} <div class="bar" style="min-width: 2em;width: {{50}}%;"></div> </div></timer> --> 
+
+
+</div>
+<!-- send div  -->
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<script>
+var app = angular.module('myApp', []);
+
+app.controller('myCtrl', function($scope,$interval, $filter,$timeout,$window) {
+
+
+ /*$scope.link = 'https://farm4.staticflickr.com/3261/2801924702_ffbdeda927_d.jpg';*/
+ $scope.link = 'http://sd.keepcalm-o-matic.co.uk/i-w600/congratulations-you-won-the-game.jpg';
+
+ $scope.colorsArray = ["R","G","B","BL","V","Y","O","W","I"];
+
+ var current = 'R'; var presCount = 0;
+ $scope.myFunction1 = function(pre, next){
+
+   /*alert(pre);*/
+
+
+      if(current == pre){
+        current = next;
+        presCount++;
+      }else{
+        alert("Fail");
+        presCount = 0;
+        current = 'R';
+      }
+
+      if(presCount == 9){
+        alert("successful");
+      }
+      /*alert(presCount);
+
+      alert(next);*/
+
+ }
+
+
+
+
+	$scope.myHeader = "Start time";
+  $scope.dvalue=true;
+  	
+  	/*$timeout(function () {
+
+      $scope.myHeader = $scope.link;
+      alert("time out ....oops..!!!");
+
+      $scope.dvalue=false;
+
+    }, 9000);*/
+
+
+
+
+  $scope.tryagain =function(){
+    //alert("reload");
+    $window.location.reload();
+  }
+  
+  $scope.exit = function(){
+    //alert("exit");
+    /*$window.close();*/
+    $window.open('https://www.google.com', '_blank');
+  }
+
+
+
+
+	$scope.Timer=null;
+	$scope.StartTimer = function () {
+                //Set the Timer start message.
+                $scope.Message = "Timer started. ";
+ 
+                //Initialize the Timer to run every 1000 milliseconds i.e. one second.
+                $scope.Timer = $interval(function () {
+                    //Display the current time.
+                    var time = $filter('date')(new Date(), 'HH:mm:ss');
+                    $scope.Message = "Timer Ticked. " + time;
+                }, 1000);
+            };
+
+    $scope.StopTimer = function () {
+ 
+                //Set the Timer stop message.
+                $scope.Message = "Timer stopped.";
+ 
+                //Cancel the Timer.
+                if (angular.isDefined($scope.Timer)) {
+                    $interval.cancel($scope.Timer);
+                }
+            };
+
+
+	$scope.myFunction122 = function() {
+        $scope.count++;
+
+    }
+    $scope.myFunction2 = function() {
+        $scope.count++;
+    }
+    $scope.myFunction3 = function() {
+        $scope.count++;
+    }
+    $scope.myFunction4 = function() {
+        $scope.count++;
+    }
+    $scope.myFunction5 = function() {
+        $scope.count++;
+    }
+    $scope.myFunction6 = function() {
+        $scope.count++;
+    }
+
+
+
+    $scope.count = 0;
+    $scope.myFunction = function() {
+        $scope.count++;
+    }
+});
+</script> 
+
+</body>
+</html>
