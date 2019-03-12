@@ -11,7 +11,9 @@ To use Install Add-on From File in Add-on manager, send the user the signed add-
 
 2.In Firefox, open the Firefox menu Firefox browser menu button and click Add-ons.
 
-3.From the settings cog, open Install Add-on From File:
+3.From the settings cog, open Install Add-on From File:.
+
+
 
 
 
